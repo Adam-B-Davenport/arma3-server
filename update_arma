@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Install/Update arma
+/usr/games/steamcmd +runscript /home/steam/arma.txt
+
+
+
+
+

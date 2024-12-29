@@ -1,0 +1,15 @@
+2307477087,DirectAction.Altis.pbo
+2667104050,DirectAction.Stratis.pbo
+360097028,TerroristHuntFactory.Altis.pbo
+1284309325,TerroristHuntVillage.Altis.pbo
+1407415300,LastStandTown.Altis.pbo
+1483995274,LastStandCompound.Altis.pbo
+1503845007,LastStandBunker.Stratis.pbo
+705986840,DynamicReconOps.Altis.pbo
+722675841,DynamicReconOps.Stratis.pbo
+952545851,DynamicReconOps.Malden.pbo
+378941393,Antistasi.Altis.pbo
+865203162,DynamicCombatOpsAltis.pbo
+865662937,DynamicCombatOps.Stratis.pbo
+953118282,DynamicCombatOps.Malden.pbo
+205306913,IntotheFog.Altis.pbo

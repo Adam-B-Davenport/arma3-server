@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+# mv ~/Steam/steamapps/workshop/content/107410/<MOD_ID> ~/steamcmd/arma3/@<ModName>
+
+
+steam_args=$(awk -F, '{print $1}' missions.txt | xargs -l echo +workshop_download_item 107410)
+echo $steam_args
+steamcmd +login cabewz $steam_args +quit
+#workshop_download_item 107410 450814997
+
+echo ""
+mkdir -p mpmissions
+trash mpmissions/*
+awk -F, '{print $1}' missions.txt | xargs -I @ cp -r "$HOME/.steam/steam/steamapps/workshop/content/107410/@/"  mpmissions
+
+# Move missions with rename
+while IFS="" read -r line || [ -n "$p" ]
+do
+  printf '%s\n' "$line"
+  id=$(echo $line | awk -F, '{print $1}')
+  file_name=$(echo $line | awk -F, '{print $2}')
+  legacy=$(find mpmissions/$id -type f)
+  echo $legacy
+  mv $legacy ~steam/arma3/mpmissions/$file_name
+done < missions.txt
+
+exit
+awk -F, '{print $1 " mpmissions/"$2}' missions.txt | xargs -I @ mv mpmissions/@
+find mpmissions -type f | xargs -I @ mv -v @ ~steam/arma3/mpmissions
+chmod 777 ~steam/arma3/mpmissions/*
+
+

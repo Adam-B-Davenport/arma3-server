@@ -1,0 +1,9 @@
+@NoPromptForPassword 1
+force_install_dir /home/steam/arma3
+login cabewz
+app_update 233780 validate
+
+# Download CBA
+workshop_download_item 107410 450814997
+
+quit
