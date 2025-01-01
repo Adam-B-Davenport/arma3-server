@@ -1,5 +1,5 @@
 #!/bin/bash
-cd arma-mods
+cd ~steam/arma3
 depth=0
 for x in $(find . -type d | sed "s/[^/]//g")
 do

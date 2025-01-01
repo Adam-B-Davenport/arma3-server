@@ -1,16 +1,17 @@
 #!/usr/bin/env bash
 
-chmod 777 server.cfg
-ln -S $PWD/server.cfg ~steam/arma3
-sudo su steam
+# chmod 777 server.cfg
+trash ~steam/arma3/server.cfg
+cp $PWD/server.cfg ~steam/arma3
 cd ~steam/arma3
-./arma3server -name=server -config=server.cfg \
--mod=@RHSUSAF \
--mod=@RHSRF \
--mod=@RHSGREF \
--mod=@RHSSAF \
--mod=@RHSPKL \
--mod=@ProjectOpfor \
+sudo -u steam ./arma3server -name=server -config=server.cfg \
+-mod=@inidbi2 \
+-mod=@rhsusaf \
+-mod=@rhsrf \
+-mod=@rhsgref \
+-mod=@rhssaf \
+-mod=@rhspkl \
+-mod=@projectopfor \
 
 exit
 #mods 
